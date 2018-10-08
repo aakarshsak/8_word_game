@@ -3,12 +3,12 @@
   
 <servlet>
 	<servlet-name>Login</servlet-name>
-	<jsp-file>/jsp/loggedIn.jsp</jsp-file>
+	<jsp-file>/loggedIn.jsp</jsp-file>
 </servlet>
 
 <servlet>
 	<servlet-name>SignUp</servlet-name>
-	<jsp-file>/jsp/signedUp.jsp</jsp-file>
+	<jsp-file>/signedUp.jsp</jsp-file>
 </servlet>
 
 <servlet-mapping>
@@ -20,5 +20,11 @@
 	<servlet-name>Login</servlet-name>
 	<url-pattern>/loggedIn</url-pattern>
 </servlet-mapping>
-  
+
+
+<welcome-file-list>
+	<welcome-file>index.html</welcome-file>
+</welcome-file-list>
+
+
 </web-app>

@@ -10,29 +10,25 @@
 <body>
 
 	<%
+		String name=request.getParameter("userName");
 		String id=request.getParameter("id");
 		String pass=request.getParameter("pass");
 		
-	
-		String name=UserLogin.login(id,pass);
-		
-		if(name!=null)
+		if(UserLogin.check(id))
 		{
-			session.setAttribute("Name",name);
 			%>
+			
+		<%@ include file="/signup.jsp" %>
+		<script>document.write("Username is already taken try another username");</script>
 		
-	<%@ include file="/index.html" %>
-	Logged in
-	
-	<% }else{
+		<%}else{
+		UserLogin.signUp(name,id,pass);
+		%>
 		
-	%>
-	
-	<%@ include file="/index.html" %>
-	
-	Invalid Username/Password
-	
-	<%} %>
+		<%@ include file="/index.html" %>
+		<script>alert("Signup successfull now login using username and password");</script>
+		<%} %>
+		
 
 </body>
 </html>
