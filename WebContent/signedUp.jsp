@@ -25,7 +25,7 @@
 		UserLogin.signUp(name,id,pass);
 		%>
 		
-		<%@ include file="/index.html" %>
+		<%@ include file="/login.jsp" %>
 		<script>alert("Signup successfull now login using username and password");</script>
 		<%} %>
 		

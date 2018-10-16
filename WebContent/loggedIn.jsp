@@ -21,7 +21,7 @@
 			session.setAttribute("Name",name);
 			%>
 		
-	<%@ include file="/index.html" %>
+	<%@ include file="/game.jsp" %>
 	<script>alert("Successfully Logged In");</script>
 	
 	<% }else{
